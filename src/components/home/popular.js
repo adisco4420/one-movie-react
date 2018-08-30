@@ -12,8 +12,8 @@ const showlatest = ({popular}) =>{
             return(
                 <div className="col-md-3" key={movie.id}>
                     <Link to="/"  >                  
-                            <img className="img-fluid" src={`${imgUrl}/${movie.poster_path}`} alt={movie.title}/>
-                            <div className="">
+                            <img className="img-fluid text-center" src={`${imgUrl}/${movie.poster_path}`} alt={movie.title}/>
+                            <div className="text-center">
                                 <h5 className="text-center">{movie.title}</h5>
                             </div>              
                     </Link>

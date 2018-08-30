@@ -7,6 +7,7 @@ import Footer from '../components/footer'
 
 //container
 import Home from '../containers/home'
+import ContactUs from '../containers/contact-us'
 
 class App extends Component {
   render() {
@@ -20,6 +21,8 @@ class App extends Component {
            
         
             <Route exact path="/" component={Home} />
+            <Route exact path="/contactus" component={ContactUs} />
+
           </Switch> 
           <Footer />
         </div>

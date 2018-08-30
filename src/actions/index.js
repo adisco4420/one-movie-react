@@ -12,3 +12,14 @@ export function popularMovies(){
         payload:request
     }
 }
+
+// SlIDER MOVIES
+export function sliderMovies(){
+    const request = fetch(`${URL}/results?_order=desc&_end=4`, 
+                    {method:'GET'})
+                    .then(res => res.json())
+    return{
+        type:'GET_SLIDER',
+        payload:request
+    }
+}
