@@ -1,8 +1,8 @@
 //https://api.themoviedb.org/3/movie/popular?api_key=d361532bea6f9750c3e5a3bc59c3794b
 
-// const URL = 'https://servre.herokuapp.com'
+const URL = 'https://servre.herokuapp.com'
 
-const URL = 'http://localhost:3001';
+//const URL = 'http://localhost:3001';
 
 // POPULAR MOVIES
 export function popularMovies(){
