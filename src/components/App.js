@@ -8,7 +8,8 @@ import Footer from '../components/footer'
 //container
 import Home from '../containers/home'
 import ContactUs from '../containers/contact-us'
-
+import Gallery from '../containers/gallery'
+import TvSeries from '../containers/tv_series'
 class App extends Component {
   render() {
     return (
@@ -21,7 +22,12 @@ class App extends Component {
            
         
             <Route exact path="/" component={Home} />
+
+            <Route exact path="/gallery" component={Gallery} />
+
             <Route exact path="/contactus" component={ContactUs} />
+
+              <Route exact path="/tv-series" component={TvSeries} />
 
           </Switch> 
           <Footer />

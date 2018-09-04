@@ -49,7 +49,7 @@ export default class Header extends React.Component {
                 <NavLink style={{color:'white'}} href="/">Home <i className="fa fa-home fa-lg"></i></NavLink>
               </NavItem>
               <NavItem>
-                <NavLink style={{color:'white'}} href="/tv-aeries">Tv-Series <i className="fa fa-tv fa-lg"></i></NavLink>
+                <NavLink style={{color:'white'}} href="/tv-series">Tv-Series <i className="fa fa-tv fa-lg"></i></NavLink>
               </NavItem>
               <NavItem>
                 <NavLink style={{color:'white'}} href="/gallery">Gallery <span className="fa fa-list fa-lg"></span></NavLink>

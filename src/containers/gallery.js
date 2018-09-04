@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import {  popularMovies } from '../actions'
+import {  galleryMovies } from '../actions'
 import { bindActionCreators } from 'redux'
 
 //component
-import Popular from '../components/home/popular'
-import Slider from '../components/home/slider'
+import Gallerys from '../components/gallery/gallerys'
 
-
-
-
-class Home extends Component {
+class Gallery extends Component {
     componentDidMount(){
-       this.props.popularMovies()
+       this.props.galleryMovies()
        
        }
      render() {
@@ -22,14 +18,14 @@ class Home extends Component {
            <div className="row">
        
        <div className="col-12">
-         <br/>
-          <h3><b>Watch out for latest movies</b></h3>
-          <hr/>
+         <br />
+         
        </div>
    </div>
-           <Slider  />
+          
+          
              </div>
-           <Popular popular={this.props.home.popular}/>
+           <Gallerys gallerys={this.props.gallery.gallerys}/>
          </div>
        )
      }
@@ -39,12 +35,12 @@ class Home extends Component {
        console.log(state);
        
        return{
-           home:state.home,
+           gallery:state.gallery,
        }
    }
    
    function mapDispatchToProps(dispatch){
-       return bindActionCreators({popularMovies, }, dispatch)
+       return bindActionCreators({galleryMovies, }, dispatch)
    }
    
-   export default connect(mapStateToprops,mapDispatchToProps)(Home) 
+   export default connect(mapStateToprops,mapDispatchToProps)(Gallery) 

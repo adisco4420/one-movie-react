@@ -1,20 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+const showlatest = ({gallerys}) =>{
 
-const showlatest = ({popular}) =>{
-    // if(typeof(popular) !== 'object' || typeof(popular) !== 'fuction' ){
-    //     console.log('not even a fuction');
-    //     return(
-    //         <div color="danger">
-    //             Popular Movies Not Found
-    //         </div>
-    //     )
-    // }
-    if(popular){
+    if(gallerys){
         try{
-        
-        return popular.map((movie) =>{
+        return gallerys.map((movie) =>{
             const imgUrl = 'http://i0.wp.com/image.tmdb.org/t/p/w342/';
             const style = {
                 background:`url(${imgUrl}/${movie.poster_path})`
@@ -30,11 +21,12 @@ const showlatest = ({popular}) =>{
                 </div>
             )
         })
+    
     }
     catch(err){
         return(
             <div>
-               <h3>popular movie not found </h3>
+               <h3>gallery movie not found </h3>
             </div>
         )
     }
@@ -42,12 +34,12 @@ const showlatest = ({popular}) =>{
     
 }
 
-const Popular = (props) =>{
+const Gallerys = (props) =>{
     console.log(props);
     
     return(
         <div className="container">
-            <h1>Popular Movies</h1>
+            <h1>Gallery </h1>
        
             <div className="row">
             
@@ -57,4 +49,4 @@ const Popular = (props) =>{
     )
 }
 
-export default Popular;
+export default Gallerys;
